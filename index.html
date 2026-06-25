@@ -111,7 +111,7 @@
                     </div>
                     <div class="feature-media">
                         <div class="rover-viewer" id="rover-viewer">
-                            <img id="rover-orbit" src="images/Rover_Orbit2/Data/images/Frame000001.png" alt="WE Mars rover 360 view" draggable="false">
+                            <img id="rover-orbit" src="images/Rover_Orbit2/Data/images_webp/Frame000109.webp" alt="WE Mars rover 360 view" draggable="false">
                             <span class="rover-viewer-hint">Drag to rotate · up/down for angle</span>
                         </div>
                     </div>
@@ -373,9 +373,11 @@
 
                 const COLS = 36;
                 const ROWS = 8;
-                const frameBase = 'images/Rover_Orbit2/Data/images/Frame';
-                const pixelsPerCol = 14;
-                const pixelsPerRow = 28;
+                const frameBase = 'images/Rover_Orbit2/Data/images_webp/Frame';
+                const frameExt = '.webp';
+                const pixelsPerCol = 16;
+                const pixelsPerRow = 32;
+                const PRELOAD_BATCH = 32;
 
                 let col = 0;
                 let row = 3;
@@ -384,16 +386,81 @@
                 let lastY = 0;
                 let dragX = 0;
                 let dragY = 0;
+                let renderQueued = false;
+                let ready = false;
+
+                const frameCache = new Map();
 
                 function framePath(rowIndex, colIndex) {
                     const r = Math.min(Math.max(rowIndex, 0), ROWS - 1);
                     const c = ((colIndex % COLS) + COLS) % COLS;
                     const frameNumber = r * COLS + c + 1;
-                    return `${frameBase}${String(frameNumber).padStart(6, '0')}.png`;
+                    return `${frameBase}${String(frameNumber).padStart(6, '0')}${frameExt}`;
+                }
+
+                function loadFrame(src) {
+                    const cached = frameCache.get(src);
+                    if (cached instanceof HTMLImageElement) {
+                        return Promise.resolve(cached);
+                    }
+                    if (cached && cached.then) {
+                        return cached;
+                    }
+
+                    const promise = new Promise((resolve, reject) => {
+                        const image = new Image();
+                        image.decoding = 'async';
+                        image.onload = () => {
+                            if (image.decode) {
+                                image.decode().then(() => resolve(image)).catch(() => resolve(image));
+                            } else {
+                                resolve(image);
+                            }
+                        };
+                        image.onerror = reject;
+                        image.src = src;
+                    }).then((image) => {
+                        if (image) frameCache.set(src, image);
+                        return image;
+                    }).catch(() => null);
+
+                    frameCache.set(src, promise);
+                    return promise;
+                }
+
+                async function preloadFrames(paths) {
+                    for (let i = 0; i < paths.length; i += PRELOAD_BATCH) {
+                        const batch = paths.slice(i, i + PRELOAD_BATCH);
+                        await Promise.all(batch.map((path) => loadFrame(path)));
+                    }
                 }
 
                 function renderFrame() {
-                    img.src = framePath(row, col);
+                    renderQueued = false;
+                    const src = framePath(row, col);
+                    const cached = frameCache.get(src);
+
+                    if (cached instanceof HTMLImageElement) {
+                        img.src = cached.src;
+                        return;
+                    }
+
+                    if (cached && cached.then) {
+                        cached.then((image) => {
+                            if (image && framePath(row, col) === src) img.src = image.src;
+                        });
+                        return;
+                    }
+
+                    loadFrame(src).then((image) => {
+                        if (image && framePath(row, col) === src) img.src = image.src;
+                    });
+                }
+
+                function queueRender() {
+                    if (renderQueued) return;
+                    renderQueued = true;
+                    requestAnimationFrame(renderFrame);
                 }
 
                 function applyDragDelta(deltaX, deltaY) {
@@ -429,10 +496,11 @@
 
                     col = ((nextCol % COLS) + COLS) % COLS;
                     row = Math.min(Math.max(nextRow, 0), ROWS - 1);
-                    renderFrame();
+                    queueRender();
                 }
 
                 function startDrag(clientX, clientY) {
+                    if (!ready) return;
                     dragging = true;
                     lastX = clientX;
                     lastY = clientY;
@@ -455,7 +523,23 @@
                     applyDragDelta(deltaX, deltaY);
                 }
 
-                renderFrame();
+                async function initViewer() {
+                    viewer.classList.add('is-loading');
+
+                    const currentRowPaths = Array.from({ length: COLS }, (_, c) => framePath(row, c));
+                    await preloadFrames(currentRowPaths);
+                    ready = true;
+                    renderFrame();
+                    viewer.classList.remove('is-loading');
+
+                    const allPaths = [];
+                    for (let r = 0; r < ROWS; r++) {
+                        for (let c = 0; c < COLS; c++) {
+                            allPaths.push(framePath(r, c));
+                        }
+                    }
+                    preloadFrames(allPaths);
+                }
 
                 viewer.addEventListener('mousedown', (e) => {
                     e.preventDefault();
@@ -477,6 +561,8 @@
 
                 viewer.addEventListener('touchend', endDrag);
                 viewer.addEventListener('touchcancel', endDrag);
+
+                initViewer();
             })();
         </script>
 

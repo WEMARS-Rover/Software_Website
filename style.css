@@ -3018,6 +3018,24 @@ textarea.form-control{
   cursor: grabbing;
 }
 
+.rover-viewer.is-loading img {
+  opacity: 0.35;
+}
+
+.rover-viewer.is-loading::before {
+  content: "Loading rover view…";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
 .rover-viewer img {
   width: 100%;
   height: 100%;
@@ -3028,6 +3046,7 @@ textarea.form-control{
   box-shadow: none;
   display: block;
   background: #fff;
+  transition: opacity 0.2s ease;
 }
 
 .rover-viewer-hint {
