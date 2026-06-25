@@ -5,14 +5,15 @@
 
 <head>
     <!--Makes page responsive. To test responsiveness, inspect page and change screen size (options are available)-->
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>WeMars</title>
 
     <!--Google Fonts link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Chakra+Petch:wght@500;600;700&display=swap" rel="stylesheet">
     <!--Links css file to html site-->
     <link rel="stylesheet" href="style.css">
     <!--Links bootstrapcdn-->
@@ -24,7 +25,7 @@
 <body>
     <section class="sub-header">
         <nav>
-            <a href="index.html"><img src="images/WeMarsLogo.png"></a>
+            <a href="index.html"><img src="images/WEMARS_Logo_New.png"></a>
             <div class="nav-links" id="navLinks">
                 <!--Close icon from Font Awesome icons-->
                 <ul>
@@ -42,8 +43,8 @@
         <nav class="m-nav">
 
             <div class="responsive-nav">
-                <img src="images/WeMarsLogo.png" class="logo">
-                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" aria-expanded="false" aria-label="Open menu"><i class="fa fa-bars"></i></a>
+                <img src="images/WEMARS_Logo_New.png" class="logo">
                 <div class="bar" id="myLinks">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
@@ -59,26 +60,47 @@
 
 
 
-    <div>
-        <h1 class="section-header">Our Sponsors!</h1>
-    </div>
-
-    <div class="sponsor-section">
-        <img class="xp" src="images/xppower.jpg"></img>
-        <img class="proto" src="images/ProtoMFG.jpg"></img>
-        <img class="usc" src="images/USC-Logo.png"></img>
-    </div>
-
-    <div>
-        <h1 class="section-header">Sponsorship Package</h1>
-        <div class="sponsorship-package-div">
-            <embed src="images\Sponsorship Package 20242025 (1) (1).pdf" width="900" height="800" type="application/pdf">
+    <section class="section">
+        <div class="container center">
+            <span class="section-eyebrow">Our Partners</span>
+            <h2 class="section-title">Our <span class="grad">Sponsors</span></h2>
+            <p class="lead">We're proud to be backed by organizations that help power our mission, from the lab bench to the competition field.</p>
         </div>
-    </div>
+        <div class="container">
+            <div class="sponsor-grid">
+                <div class="sponsor-card">
+                    <img src="images/xppower.jpg" alt="XP Power">
+                </div>
+                <div class="sponsor-card">
+                    <img src="images/ProtoMFG.jpg" alt="Protospace MFG">
+                </div>
+                <div class="sponsor-card sponsor-card--logo">
+                    <img src="images/USC-Logo.png" alt="University Students' Council">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="download-div">
-        <a class="download-button" href="images\Sponsorship Package 20242025 UPDATED (1).pdf" download>Download Sponsor Package</a>
-    </div>
+    <section class="section">
+        <div class="container">
+            <div class="package-card">
+                <div class="package-info">
+                    <span class="section-eyebrow">Get Involved</span>
+                    <h2 class="section-title">Sponsorship Package</h2>
+                    <p class="lead">Everything you need to know about partnering with WE Mars: sponsorship tiers, the benefits at each level, and how your support drives our rover forward.</p>
+                    <div class="package-actions">
+                        <a class="btn btn-primary" href="images/Sponsorship Package 20242025 UPDATED (1).pdf" download><i class="fa fa-download"></i> Download Package</a>
+                        <a class="btn btn-ghost" href="images/Sponsorship Package 20242025 (1) (1).pdf" target="_blank" rel="noopener">View PDF</a>
+                    </div>
+                </div>
+                <div class="package-badge">
+                    <i class="fa fa-file-pdf"></i>
+                    <span class="package-badge-title">Sponsorship Package</span>
+                    <span class="package-badge-sub">2024 / 2025 &middot; PDF</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="contact">
 
@@ -187,11 +209,17 @@
     <script>
 
         function toggleMenu() {
-            var x = document.getElementById("myLinks");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
+            var menu = document.getElementById("myLinks");
+            var isOpen = menu.classList.toggle("is-open");
+            var icon = document.querySelector(".m-nav .icon");
+            if (icon) {
+                icon.setAttribute("aria-expanded", isOpen ? "true" : "false");
+                icon.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+            }
+            var iconMark = icon && icon.querySelector("i");
+            if (iconMark) {
+                iconMark.classList.toggle("fa-bars", !isOpen);
+                iconMark.classList.toggle("fa-xmark", isOpen);
             }
         }
 

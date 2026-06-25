@@ -2,23 +2,24 @@
 <html>
     <head>
         <!--Makes page responsive. To test responsiveness, inspect page and change screen size (options are available)-->
-            <meta name="viewport" content="with=device-width, initial-scale=1.0">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>WeMars</title>
 
         <!--Google Fonts link-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Chakra+Petch:wght@500;600;700&display=swap" rel="stylesheet">
         <!--Links css file to html site-->
         <link rel="stylesheet" href="style.css">
         <!--Links bootstrapcdn-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <section class="sub-header">
+        <section class="sub-header sub-header--subsystems">
             <nav>
-                <a href="index.html"><img src="images/WeMarsLogo.png"></a>
+                <a href="index.html"><img src="images/WEMARS_Logo_New.png"></a>
                 <div class="nav-links" id="navLinks">
                     <!--Close icon from Font Awesome icons-->
                     <ul>
@@ -31,13 +32,16 @@
                 </div>
             </nav>
 
-            <h1>Subsystems</h1>
+            <div class="sub-header-banner">
+                <h1>Subsystems</h1>
+                <p class="subsystems-click-note"><i class="fa-solid fa-hand-pointer"></i> Click any subsystem image below to view the latest progress updates.</p>
+            </div>
 
             <nav class="m-nav">
 
                 <div class="responsive-nav">
-                    <img src="images/WeMarsLogo.png" class="logo">
-                    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
+                    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" aria-expanded="false" aria-label="Open menu"><i class="fa fa-bars"></i></a>
+                    <img src="images/WEMARS_Logo_New.png" class="logo">
                     <div class="bar" id="myLinks">
                         <a href="index.html">Home</a>
                         <a href="about.html">About</a>
@@ -49,84 +53,88 @@
             </nav>
         </section>
 
-<div>
-    <!--<div><h1 class="subteamt">Click on the images to learn more !</h1></div>-->
     <section class = "sec-01">
         <div class="subcontainer">
-            <div class="subcontent">
-                <div class="subimages" href="javascript:void(0);" onclick="toggleMechCard()">
-                     <img src = "./images/Mechanical/mechanical progress.PNG">
+            <div class="subcontent" id="mechanical">
+                <div class="subimages" role="button" tabindex="0" aria-label="View mechanical progress" onclick="openSubsystemCard('mechanical')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openSubsystemCard('mechanical');}">
+                     <img src="./images/Mechanical/Render3.png" alt="Mechanical subsystem">
                 </div>
                 <div class = "subtext-box">
                     <h3>Mechanical</h3>
-                    <p>The WE Mars mechanical team is responsible for the design, testing, and assembly of all the components that make up our rover. From material selection and CAD to prototyping and manufacturing, we ensure that every part of the rover meets our standards. Our team focuses on creating innovative, reliable, and efficient designs to tackle any challenge our rover might face, whether it’s navigating rough terrain or performing delicate tasks with a robotic arm.
-
-                        Collaboration is key to our success, as we work closely with the electrical and software teams to integrate our mechanical systems.
-                        
-                        Currently, we are working on a new rover, aiming to surpass our previous rovers capabilities with our gained knowledge from past competitions.
-                        </p>
+                    <p>We design, test, and build everything mechanical on the rover, from material selection and CAD
+                        to prototyping and manufacturing. Our focus is on parts that hold up on rough terrain and still
+                        handle precise work with the arm.</p>
+                    <p>We work closely with electrical and software to make sure everything fits together. Right now
+                        we're building a new rover and using what we learned at past competitions to push past what
+                        we've done before.</p>
                 </div>
             </div>
 
-            <div class="subcontent">
-                <div class="subimages">
-                     <img src = "./images/Electrical/Elec-image.png">
+            <div class="subcontent" id="electrical">
+                <div class="subimages" role="button" tabindex="0" aria-label="View electrical progress" onclick="openSubsystemCard('electrical')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openSubsystemCard('electrical');}">
+                     <img src = "./images/Electrical/Elec-image.png" alt="Electrical subsystem">
                 </div>
                 <div class = "subtext-box">
                     <h3>Electrical</h3>
-                    <p>On the WE Mars electrical team, we have the responsibility of creating all the hardware that will be on the rover. We pride ourselves on making everything from scratch, such as our own power distribution, Gyroscopes, GPS, Motor Controls and other electrical systems.
-
-                        Key skills learned on our team are PCB design with Altium Designer, embedded systems design, circuit protection, and communication. The electrical team provides power for the mechanical team's arm and motors, as well as the software team's equipment, This means communication is critical.
-
-                        This year, our big focus is on optimizing our power distribution system and creating an initial design of motor controls!
-                        </p>
+                    <p>We handle all the hardware on the rover and build a lot of it in-house: power distribution,
+                        motor control, GPS, IMUs, and more. Team members pick up PCB design in Altium, embedded systems,
+                        circuit protection, and getting different boards talking to each other.</p>
+                    <p>We keep the arm and motors powered for mechanical and run the sensors and computers software
+                        needs, so staying in sync with the other subteams is a big part of the job. This year we're
+                        focused on tightening up power distribution and getting a solid first version of our motor
+                        controls.</p>
                 </div>
             </div>
 
-            <div class="subcontent">
-                <div class="subimages">
-                     <img src = "./images/Software/coding-background.jpg">
+            <div class="subcontent" id="software">
+                <div class="subimages" role="button" tabindex="0" aria-label="View software progress" onclick="openSubsystemCard('software')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openSubsystemCard('software');}">
+                     <img src = "./images/Software/coding-background.jpg" alt="Software subsystem">
                 </div>
                 <div class = "subtext-box">
                     <h3>Software</h3>
-                    <p>The WE Mars software team has the responsibility of getting the rovers motor controls, sensors, canBUS and communications working. We are currently focusing on getting our sensors, such as liDAR, Cameras, IMU, GPS, etc. completely operational via ROS2. Using our previous rover as a playground, on it we plan to test the functionality of our systems, this is to ensure that by the time our new rover is completed we can easily integrate our systems to it with minor changes. We are hoping to begin exciting projects like autonomous navigation and computer vision for our rover by the start of summer. 
-                        </p>
+                    <p>We get motor control, sensors, CAN bus, and communications running on the rover. Right now we're
+                        bringing sensors like LiDAR, cameras, IMU, and GPS online through ROS2.</p>
+                    <p>We're using last year's rover as a test bed so when the new build is ready, most of our software
+                        drops in with minimal rework. This summer we're hoping to push into autonomous navigation and
+                        computer vision.</p>
                 </div>
             </div>
 
 
-            <div class="subcontent">
-                <div class="subimages">
-                     <img src = "./images/Buis/business-charts.avif">
+            <div class="subcontent" id="business">
+                <div class="subimages" role="button" tabindex="0" aria-label="View business progress" onclick="openSubsystemCard('business')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openSubsystemCard('business');}">
+                     <img src = "./images/Buis/business-charts.avif" alt="Business subsystem">
                 </div>
                 <div class = "subtext-box">
                     <h3>Business</h3>
-                    <p>The WE Mars business team holds the responsibility of properly securing and managing all funds, handling purchases, and tracking financials of the club. We are currently trying to get our team some well deserved sponsors to help cut our costs, especially with us creating a brand new rover. We also manage creation of team apparel, and hold social events to help our team members bond!
-                        </p>
+                    <p>We manage the team's money: sponsors, purchases, and keeping track of where funds go. With a
+                        brand-new rover in the works, landing sponsors makes a real difference.</p>
+                    <p>We also handle team apparel and plan social events so people get to know each other outside the
+                        lab.</p>
                 </div>
             </div>
 
 
-            <div class="subcontent">
-                <div class="subimages">
-                     <img src = "./images/Science/sci-photo.jfif">
+            <div class="subcontent" id="science">
+                <div class="subimages" role="button" tabindex="0" aria-label="View science progress" onclick="openSubsystemCard('science')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openSubsystemCard('science');}">
+                     <img src = "./images/Science/sci-photo.jfif" alt="Science subsystem">
                 </div>
                 <div class = "subtext-box">
                     <h3>Science</h3>
-                    <p>The WE Mars science team is solely responsible in creating the devices to collect and anyalize dirt samples, this involves creating devices to hold the dirt and also procedures for testing the contents of it. We are currently trying to create a device that collects dirt and is also interchangable with the arm, this provides our team with a flexible yet effective design.
-                        </p>
+                    <p>We build the tools to collect and analyze soil samples, including holders and testing procedures.
+                        Right now we're working on a sampler that mounts to the arm so we can swap payloads without
+                        rebuilding the whole setup.</p>
                 </div>
             </div>
 
 
         </div>
     </section>
-</div>
 
+<div class="overlay" id="overlay" onclick="closeSubsystemCard()"></div>
 
-<div class="overlay" id="overlay"></div>
-<div class="m-card" id="Mechanical">
-    <button class="close-btn" onclick="toggleMechCard()">
+<div class="m-card" id="card-mechanical">
+    <button class="close-btn" type="button" aria-label="Close" onclick="closeSubsystemCard()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
@@ -140,12 +148,96 @@
                 </p>
             </div>
             <div class="m-card-images">
-                <img src="./images/Mechanical/mech3.png" alt="Mechanical Details">
-                <img src="./images/Mechanical/mech1.png" alt="Mechanical Subsystem">
-                <img src="./images/Mechanical/mech2.png" alt="Mechanical Details">
+                <img src="./images/Mechanical/mech3.png" alt="Mechanical progress">
+                <img src="./images/Mechanical/mech1.png" alt="Mechanical subsystem">
+                <img src="./images/Mechanical/mech2.png" alt="Mechanical progress">
             </div>
             <div class="m-card-text">
                 <p>In the 2024/2025 season, our team grew to 70 members, allowing us to work on more complicated designs at a faster pace. Our goal remains the same from last year; to design the smallest and lightest rover competing at CIRC. As of March we have completed 90% of our final design and are on track to complete manufacturing from may-aug.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m-card" id="card-electrical">
+    <button class="close-btn" type="button" aria-label="Close" onclick="closeSubsystemCard()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+    <div class="m-card-content">
+        <h2>Electrical Subsystem</h2>
+        <div class="m-card-body">
+            <div class="m-card-text">
+                <p>Latest progress updates for the electrical subteam will be posted here. Add photos of PCB builds, power distribution milestones, motor controller testing, and wiring integration.</p>
+            </div>
+            <div class="m-card-images m-card-images--template">
+                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
+                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
+                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m-card" id="card-software">
+    <button class="close-btn" type="button" aria-label="Close" onclick="closeSubsystemCard()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+    <div class="m-card-content">
+        <h2>Software Subsystem</h2>
+        <div class="m-card-body">
+            <div class="m-card-text">
+                <p>Latest progress updates for the software subteam will be posted here. Add photos of autonomy testing, sensor integration, ROS2 setup, and on-rover software milestones.</p>
+            </div>
+            <div class="m-card-images m-card-images--template">
+                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
+                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
+                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m-card" id="card-business">
+    <button class="close-btn" type="button" aria-label="Close" onclick="closeSubsystemCard()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+    <div class="m-card-content">
+        <h2>Business Subsystem</h2>
+        <div class="m-card-body">
+            <div class="m-card-text">
+                <p>Latest progress updates for the business subteam will be posted here. Add photos from outreach events, sponsor meetings, team apparel launches, and social events.</p>
+            </div>
+            <div class="m-card-images m-card-images--template">
+                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
+                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
+                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m-card" id="card-science">
+    <button class="close-btn" type="button" aria-label="Close" onclick="closeSubsystemCard()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+    <div class="m-card-content">
+        <h2>Science Subsystem</h2>
+        <div class="m-card-body">
+            <div class="m-card-text">
+                <p>Latest progress updates for the science subteam will be posted here. Add photos of sample collection prototypes, lab testing, and science payload integration.</p>
+            </div>
+            <div class="m-card-images m-card-images--template">
+                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
+                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
+                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
             </div>
         </div>
     </div>
@@ -169,70 +261,88 @@
     <script>
 
         function toggleMenu() {
-            var x = document.getElementById("myLinks");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
+            var menu = document.getElementById("myLinks");
+            var isOpen = menu.classList.toggle("is-open");
+            var icon = document.querySelector(".m-nav .icon");
+            if (icon) {
+                icon.setAttribute("aria-expanded", isOpen ? "true" : "false");
+                icon.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+            }
+            var iconMark = icon && icon.querySelector("i");
+            if (iconMark) {
+                iconMark.classList.toggle("fa-bars", !isOpen);
+                iconMark.classList.toggle("fa-xmark", isOpen);
             }
         }
 
-        function toggleMechCard() {
-            var card = document.getElementById("Mechanical");
-            var overlay = document.getElementById("overlay");
+        var SUBSYSTEMS = ['mechanical', 'electrical', 'software', 'business', 'science'];
+        var activeCard = null;
 
-            if (card.classList.contains("active")) {
-                card.classList.remove("active");
-                overlay.classList.remove("active");
+        function openSubsystemCard(name) {
+            if (SUBSYSTEMS.indexOf(name) === -1) return;
 
-                setTimeout(function() {
-                    card.style.visibility = "hidden";
-                    overlay.style.visibility = "hidden";
-                }, 600); 
-            } else {
-                card.style.visibility = "visible";
-                overlay.style.visibility = "visible";
-                card.classList.add("active");
-                overlay.classList.add("active");
+            closeSubsystemCard(false);
+            var card = document.getElementById('card-' + name);
+            var overlay = document.getElementById('overlay');
+            if (!card || !overlay) return;
+
+            activeCard = name;
+            card.style.visibility = 'visible';
+            overlay.style.visibility = 'visible';
+            card.classList.add('active');
+            overlay.classList.add('active');
+            history.replaceState(null, '', '#' + name);
+        }
+
+        function closeSubsystemCard(clearHash) {
+            if (clearHash === undefined) clearHash = true;
+            var overlay = document.getElementById('overlay');
+
+            SUBSYSTEMS.forEach(function (name) {
+                var card = document.getElementById('card-' + name);
+                if (!card) return;
+                card.classList.remove('active');
+                setTimeout(function () {
+                    if (!card.classList.contains('active')) {
+                        card.style.visibility = 'hidden';
+                    }
+                }, 600);
+            });
+
+            if (overlay) {
+                overlay.classList.remove('active');
+                setTimeout(function () {
+                    if (!overlay.classList.contains('active')) {
+                        overlay.style.visibility = 'hidden';
+                    }
+                }, 600);
+            }
+
+            activeCard = null;
+            if (clearHash && window.location.hash) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
             }
         }
 
+        function handleSubsystemHash() {
+            var hash = window.location.hash.replace('#', '').toLowerCase();
+            if (SUBSYSTEMS.indexOf(hash) === -1) return;
 
-        function toggleElecCard() {
-            var x = document.getElementById("Electrical");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
+            var section = document.getElementById(hash);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
+            setTimeout(function () {
+                openSubsystemCard(hash);
+            }, 350);
         }
 
-        function toggleSoftCard() {
-            var x = document.getElementById("Software");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeSubsystemCard();
+        });
 
-        function toggleBusCard() {
-            var x = document.getElementById("Business");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
-
-        function toggleSciCard() {
-            var x = document.getElementById("Science");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
+        window.addEventListener('load', handleSubsystemHash);
+        window.addEventListener('hashchange', handleSubsystemHash);
 
         ScrollReveal( {
         reset: false, 

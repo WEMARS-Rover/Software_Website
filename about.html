@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <!--Makes page responsive. To test responsiveness, inspect page and change screen size (options are available)-->
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WeMars</title>
+    <title>WE Mars | Our Team</title>
 
     <!--Google Fonts link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Chakra+Petch:wght@500;600;700&display=swap" rel="stylesheet">
     <!--Links css file to html site-->
     <link rel="stylesheet" href="style.css">
     <!--Links bootstrapcdn-->
@@ -22,9 +22,8 @@
 <body>
     <section class="sub-header">
         <nav>
-            <a href="index.html"><img src="images/WeMarsLogo.png"></a>
+            <a href="index.html"><img src="images/WEMARS_Logo_New.png"></a>
             <div class="nav-links" id="navLinks">
-                <!--Close icon from Font Awesome icons-->
                 <ul>
                     <li><a href="index.html"><span class="top"><span>Home</span></span><span class="bottom"><span>Home</span></span></a></li>
                     <li><a href="about.html"><span class="top"><span>About</span></span><span class="bottom"><span>About</span></span></a></li>
@@ -36,10 +35,9 @@
         </nav>
 
         <nav class="m-nav">
-
             <div class="responsive-nav">
-                <img src="images/WeMarsLogo.png" class="logo">
-                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" aria-expanded="false" aria-label="Open menu"><i class="fa fa-bars"></i></a>
+                <img src="images/WEMARS_Logo_New.png" class="logo">
                 <div class="bar" id="myLinks">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
@@ -53,207 +51,152 @@
         <h1>Our Team</h1>
     </section>
 
+    <div class="team-wrap">
 
-    <div class="row">
-
-
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/projleadbg2.jpg">
-                    <img class="person__img" id="projlead2" src="images/aboutpage/dev_headshot-removebg-preview.png"
-                        alt="Profile photo">
+        <!-- Leadership -->
+        <section class="team-section team-section--leadership">
+            <div class="team-head">
+                <span class="section-eyebrow">Leadership</span>
+                <h2 class="section-title">Our <span class="grad">leaders</span></h2>
+            </div>
+            <div class="team-grid team-grid--leadership">
+                <div class="profile">
+                    <div class="lead-portrait">
+                        <img class="lead-portrait__photo" id="lead-chris" src="images/aboutpage/Chris_Headshot-removebg-preview.png" alt="Chris Latosinsky">
+                    </div>
+                    <h1>Chris Latosinsky</h1>
+                    <h4>Co-President</h4>
+                </div>
+                <div class="profile">
+                    <div class="lead-portrait">
+                        <img class="lead-portrait__photo" id="lead-bryan" src="images/aboutpage/Bryan2-removebg-preview.png" alt="Bryan Heddle">
+                    </div>
+                    <h1>Bryan Heddle</h1>
+                    <h4>President</h4>
+                </div>
+                <div class="profile">
+                    <div class="lead-portrait">
+                        <img class="lead-portrait__photo" id="lead-ben" src="images/aboutpage/BEN_HEADSHOT-removebg-preview.png" alt="Ben Ashman">
+                    </div>
+                    <h1>Ben Ashman</h1>
+                    <h4>Co-President</h4>
                 </div>
             </div>
-            <h1>Dev Patel</h1>
-            <h4>Co-President</h4>
-        </div>
+        </section>
 
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/projLeadbg.jpg">
-                    <img class="person__img" id="projLead" src="images/aboutpage/mnoble_headshot-removebg-preview.png"
-                        alt="Profile photo">
+        <!-- Mechanical -->
+        <section class="team-section">
+            <div class="team-head">
+                <span class="section-eyebrow">Sub-team</span>
+                <h2 class="section-title"><span class="grad">Mechanical</span></h2>
+            </div>
+            <div class="team-grid">
+                <div class="profile profile--placeholder">
+                    <div class="person">
+                        <div class="person__container person__container--placeholder">
+                            <div class="profile-placeholder"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                    </div>
+                    <h1>Open Role</h1>
+                    <h4>Mechanical Lead</h4>
                 </div>
             </div>
-            <h1>Mark Noble</h1>
-            <h4>Co-President</h4>
-        </div>
+        </section>
 
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/elecleadbg.jpg">
-                    <img class="person__img" id="mechlead" style="bottom: -35;"
-                        src="images/aboutpage/Chris_Headshot-removebg-preview.png" alt="Profile photo">
+        <!-- Electrical -->
+        <section class="team-section">
+            <div class="team-head">
+                <span class="section-eyebrow">Sub-team</span>
+                <h2 class="section-title"><span class="grad">Electrical</span></h2>
+            </div>
+            <div class="team-grid">
+                <div class="profile profile--placeholder">
+                    <div class="person">
+                        <div class="person__container person__container--placeholder">
+                            <div class="profile-placeholder"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                    </div>
+                    <h1>Open Role</h1>
+                    <h4>Electrical Lead</h4>
                 </div>
             </div>
-            <h1>Chris Latosinsky</h1>
-            <h4>Mechanical Lead</h4>
-        </div>
+        </section>
 
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/elec2bg.jpg">
-                    <img class="person__img" id="mechlead2" src="images/aboutpage/Shayla_Headshot-removebg-preview.png" alt="Profile photo">
+        <!-- Software -->
+        <section class="team-section">
+            <div class="team-head">
+                <span class="section-eyebrow">Sub-team</span>
+                <h2 class="section-title"><span class="grad">Software</span></h2>
+            </div>
+            <div class="team-grid">
+                <div class="profile profile--placeholder">
+                    <div class="person">
+                        <div class="person__container person__container--placeholder">
+                            <div class="profile-placeholder"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                    </div>
+                    <h1>Open Role</h1>
+                    <h4>Software Lead</h4>
                 </div>
             </div>
-            <h1>Shayla Diep</h1>
-            <h4>Mechanical Lead</h4>
-        </div>
+        </section>
 
+        <!-- Business -->
+        <section class="team-section">
+            <div class="team-head">
+                <span class="section-eyebrow">Sub-team</span>
+                <h2 class="section-title"><span class="grad">Business</span></h2>
+            </div>
+            <div class="team-grid">
+                <div class="profile profile--placeholder">
+                    <div class="person">
+                        <div class="person__container person__container--placeholder">
+                            <div class="profile-placeholder"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                    </div>
+                    <h1>Open Role</h1>
+                    <h4>Business Lead</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Science -->
+        <section class="team-section">
+            <div class="team-head">
+                <span class="section-eyebrow">Sub-team</span>
+                <h2 class="section-title"><span class="grad">Science</span></h2>
+            </div>
+            <div class="team-grid">
+                <div class="profile profile--placeholder">
+                    <div class="person">
+                        <div class="person__container person__container--placeholder">
+                            <div class="profile-placeholder"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                    </div>
+                    <h1>Open Role</h1>
+                    <h4>Science Lead</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder -->
+        <section class="team-section team-section--founder">
+            <div class="team-head">
+                <span class="section-eyebrow">Where it started</span>
+                <h2 class="section-title"><span class="grad">Founder</span></h2>
+            </div>
+            <div class="team-grid team-grid--founder">
+                <div class="profile">
+                    <div class="lead-portrait">
+                        <img class="lead-portrait__photo" id="lead-founder" src="images/aboutpage/eugeune-removebg-preview.png" alt="Eugen Porter">
+                    </div>
+                    <h1>Eugen Porter</h1>
+                    <h4>Founder</h4>
+                </div>
+            </div>
+        </section>
 
     </div>
-
-    <div class="row">
-
-
-
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/softwarebg.png">
-                    <img class="person__img" id="softlead" src="images/aboutpage/Bryan2-removebg-preview.png" alt="Profile photo">
-                </div>
-            </div>
-            <h1>Bryan Heddle</h1>
-            <h4>Software Lead</h4>
-        </div>
-
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/software2bg.jpg">
-                    <img class="person__img" id="softlead2" src="images/aboutpage/Adam_Headshot-removebg-preview.png" alt="Profile photo">
-                </div>
-            </div>
-            <h1>Adam Dunn</h1>
-            <h4>Software Lead</h4>
-        </div>
-
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/buslead2bg.jpg">
-                    <img class="person__img" id="eleclead" src="images/aboutpage/BEN_HEADSHOT-removebg-preview.png"
-                        alt="Profile photo">
-                </div>
-            </div>
-            <h1>Ben Ashman</h1>
-            <h4>Electrical Lead</h4>
-        </div>
-
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/buisleadbg2.jpg">
-                    <img class="person__img" id="eleclead2" src="images/aboutpage/Jonny-removebg-preview.png"
-                        alt="Profile photo">
-                </div>
-            </div>
-            <h1>Jonathan Hui</h1>
-            <h4>Electrical Lead</h4>
-        </div>
-
-
-    </div>
-
-    <div class="row">
-
-
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/mechbg.jpg">
-                    <img class="person__img" id="buislead" src="images/aboutpage/Armaan.png"
-                        alt="Profile photo">
-                </div>
-            </div>
-            <h1>Armaan Jassal</h1>
-            <h4>Business Lead</h4>
-        </div>
-
-         
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/mechbg2.jpg">
-                    <img class="person__img" id="buislead2" src="images/aboutpage/Nathan-removebg-preview.png"
-                        alt="Profile photo">
-                </div>
-            </div>
-            <h1>Nathan Eng</h1>
-            <h4>Business Lead</h4>
-        </div>
-   
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/arminbg.jpg">
-                    <img class="person__img" id="sciencelead"
-                        src="images/aboutpage/ScienceLead-removebg-preview.png" alt="Profile photo">
-                </div>
-            </div>
-            <h1>Lindsay Reymer</h1>
-            <h4>Science Lead</h4>
-        </div>
-
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/scileadbg.webp">
-                    <img class="person__img" id="scilead" src="images/aboutpage/Mitch_Headshot-removebg-preview.png"
-                        alt="Profile photo">
-                </div>
-            </div>
-            <h1>Mitch Strasman</h1>
-            <h4>Science Lead</h4>
-        </div>
-
-    </div>
-
-
-    <div class="row">
-
-        <div class="profile">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/DD-Abstract-Background-11232-Preview.jpg">
-                    <img class="person__img" id="founder" src="images/aboutpage/eugeune-removebg-preview.png"
-                        alt="Profile photo">
-                </div>
-            </div>
-            <h1>Eugen Porter</h1>
-            <h4>Founder</h4>
-        </div>
-
-    </div>
-
-
-
-
-
-    <!--<div class="row">
-
-        <div class="profile" id="filler">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/R.jpg">
-                </div>
-            </div>
-        </div>
-
-
-        <div class="profile" id="filler">
-            <div class="person">
-                <div class="person__container">
-                    <img class="person__circle" src="images/aboutpage/R.jpg">
-                </div>
-            </div>
-        </div>
-    </div>-->
 
     <section class="footer">
         <h2>WE Mars Team</h2>
@@ -261,21 +204,14 @@
         <a href="sponsor.html" class="hero-btn" id="contact-btn">CONTACT US</a>
         <div class="icons-container">
             <div class="icons"><a href=""><i class="fa-brands fa-facebook fa-2xl"></i></a></div>
-            <div class="icons"><a href="https://www.instagram.com/we.mars/"><i
-                        class="fa-brands fa-instagram fa-2xl"></i></a></div>
-            <div class="icons"><a href="https://www.linkedin.com/company/western-engineering-mars-rover-team/about/"><i
-                        class="fa-brands fa-linkedin fa-2xl"></i></a></div>
+            <div class="icons"><a href="https://www.instagram.com/we.mars/"><i class="fa-brands fa-instagram fa-2xl"></i></a></div>
+            <div class="icons"><a href="https://www.linkedin.com/company/western-engineering-mars-rover-team/about/"><i class="fa-brands fa-linkedin fa-2xl"></i></a></div>
         </div>
         <p>Made by WeMars members</p>
     </section>
 
-    <section>
-        <p></p>
-    </section>
-
     <!--Javascript for Toggle Menu-->
     <script>
-
         var navLinks = document.getElementById("navLinks");
 
         function showMenu() {
@@ -286,23 +222,21 @@
             navLinks.style.right = "-200px";
         }
 
-    </script>
-
-
-    <!--Javascript for mobile menu toggling-->
-    <script>
-
         function toggleMenu() {
-            var x = document.getElementById("myLinks");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
+            var menu = document.getElementById("myLinks");
+            var isOpen = menu.classList.toggle("is-open");
+            var icon = document.querySelector(".m-nav .icon");
+            if (icon) {
+                icon.setAttribute("aria-expanded", isOpen ? "true" : "false");
+                icon.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+            }
+            var iconMark = icon && icon.querySelector("i");
+            if (iconMark) {
+                iconMark.classList.toggle("fa-bars", !isOpen);
+                iconMark.classList.toggle("fa-xmark", isOpen);
             }
         }
-
     </script>
-
 
 </body>
 
