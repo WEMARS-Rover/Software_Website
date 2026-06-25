@@ -48,12 +48,48 @@
     <section class="join-section">
         <div class="join-card">
             <span class="join-eyebrow">Get involved</span>
-            <p class="join-lead">Interested in building rovers with us? Hop into our Discord to meet the team, ask
-                questions, and find out how to get involved.</p>
-            <a class="join-discord-btn" href="https://discord.gg/5ayHMr8khv" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-discord"></i>
-                Join our Discord
-            </a>
+            <p class="join-lead">Interested in building rovers with us? Enter your Western email and we'll send
+                you a link to our Discord.</p>
+            <div class="join-body">
+                <p class="join-notice" id="join-notice" hidden>
+                    This form only works on the live site or a local server, not when opening the HTML file directly.
+                </p>
+                <form
+                    id="join-form"
+                    class="join-form"
+                    action="https://formsubmit.co/wemars@uwo.ca"
+                    method="POST"
+                    novalidate
+                >
+                    <input type="hidden" name="_subject" value="Your WEMARS Discord invite">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_autoresponse" id="join-autoresponse" value="">
+                    <input type="hidden" name="_next" id="join-next" value="">
+                    <input type="text" name="_honey" class="join-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <div class="join-field">
+                        <label class="join-label" for="join-email">Western email</label>
+                        <input
+                            type="email"
+                            id="join-email"
+                            name="email"
+                            class="join-input"
+                            placeholder="name@uwo.ca"
+                            autocomplete="email"
+                            inputmode="email"
+                            spellcheck="false"
+                            required
+                        >
+                    </div>
+                    <p class="join-error" id="join-error" hidden></p>
+                    <button type="submit" class="join-submit" id="join-submit">
+                        Get Discord invite
+                    </button>
+                </form>
+                <div class="join-success" id="join-success" hidden>
+                    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                    <p>Check your inbox — we sent the Discord link to your @uwo.ca email.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -73,6 +109,7 @@
             }
         }
     </script>
+    <script src="join.js"></script>
 
 </body>
 </html>
