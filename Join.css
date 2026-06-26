@@ -203,32 +203,6 @@
   font-size: 13px !important;
 }
 
-.join-discord-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: fit-content;
-  padding: 12px 22px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #5865f2, #4752c4);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 10px 28px rgba(88, 101, 242, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.join-discord-btn i {
-  font-size: 20px;
-}
-
-.join-discord-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 34px rgba(88, 101, 242, 0.45);
-}
-
 @media (max-width: 800px) {
   .join-section {
     min-height: auto;
