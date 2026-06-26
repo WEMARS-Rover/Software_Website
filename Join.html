@@ -63,8 +63,8 @@
                 >
                     <input type="hidden" name="_subject" value="Your WEMARS Discord invite">
                     <input type="hidden" name="_template" value="box">
-                    <input type="hidden" name="_autoresponse" id="join-autoresponse" value="">
-                    <input type="hidden" name="_next" id="join-next" value="">
+                    <input type="hidden" name="_autoresponse" id="join-autoresponse" value="Thanks for your interest in WEMARS! Join our Discord server here: https://discord.gg/5ayHMr8khv — See you in the server! — WEMARS Team">
+                    <input type="hidden" name="_next" id="join-next" value="https://wemars.org/Join.html?sent=1">
                     <input type="text" name="_honey" class="join-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <div class="join-field">
                         <label class="join-label" for="join-email">Western email</label>
@@ -87,7 +87,14 @@
                 </form>
                 <div class="join-success" id="join-success" hidden>
                     <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                    <p>Check your inbox — we sent the Discord link to your @uwo.ca email.</p>
+                    <div class="join-success-content">
+                        <p>You're in! Join our Discord server:</p>
+                        <a class="join-discord-btn" id="join-discord-link" href="https://discord.gg/5ayHMr8khv" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-discord"></i>
+                            Join Discord
+                        </a>
+                        <p class="join-success-note">We also emailed the link to your @uwo.ca address.</p>
+                    </div>
                 </div>
             </div>
         </div>

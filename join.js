@@ -29,22 +29,18 @@
         return UWO_EMAIL.test(value.trim());
     }
 
-    if (autoresponseInput) {
-        autoresponseInput.value = [
-            'Hi,',
-            '',
-            'Thanks for your interest in WEMARS! Join our Discord server here:',
-            '',
-            DISCORD_INVITE,
-            '',
-            'See you in the server!',
-            'WEMARS Team',
-        ].join('\n');
+    const discordLink = document.getElementById('join-discord-link');
+    if (discordLink) discordLink.href = DISCORD_INVITE;
+
+    if (autoresponseInput && !autoresponseInput.value.trim()) {
+        autoresponseInput.value = 'Thanks for your interest in WEMARS! Join our Discord server here: ' + DISCORD_INVITE + ' — See you in the server! — WEMARS Team';
     }
 
     if (nextInput) {
         const returnUrl = window.location.href.split('?')[0].split('#')[0];
-        nextInput.value = returnUrl + '?sent=1';
+        if (returnUrl.indexOf('http') === 0) {
+            nextInput.value = returnUrl + '?sent=1';
+        }
     }
 
     if (window.location.search.indexOf('sent=1') !== -1) {
