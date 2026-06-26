@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEMARS Sponsorship Package 2026/2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Chakra+Petch:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #7c44d6;
+      --primary-deep: #4c2a87;
+      --accent: #a87bff;
+      --ink: #1a1228;
+      --muted: #5c5470;
+      --surface: #f7f4fc;
+      --border: #e4dbf5;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page {
+      size: letter;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--ink);
+      background: #ece8f3;
+      line-height: 1.55;
+      font-size: 10.5pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto 24px;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      box-shadow: 0 8px 32px rgba(76, 42, 135, 0.12);
+    }
+
+    .page:last-child { page-break-after: auto; }
+
+    .page-inner {
+      padding: 0.55in 0.72in 0.72in;
+      min-height: 11in;
+    }
+
+    .page-footer {
+      position: absolute;
+      left: 0.72in;
+      right: 0.72in;
+      bottom: 0.42in;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8pt;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Chakra Petch', 'Poppins', sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    h2 {
+      font-size: 20pt;
+      margin-bottom: 14px;
+      color: var(--primary-deep);
+    }
+
+    h2 .grad {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h3 {
+      font-size: 11pt;
+      margin: 18px 0 8px;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    p { margin-bottom: 10px; color: #2d2640; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .lead {
+      font-size: 11.5pt;
+      color: var(--muted);
+      max-width: 36em;
+    }
+
+    /* Cover */
+    .cover {
+      color: var(--white);
+      position: relative;
+      min-height: 11in;
+    }
+
+    .cover-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .cover-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 55%;
+    }
+
+    .cover-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(145deg, rgba(18, 9, 31, 0.9) 0%, rgba(42, 22, 80, 0.84) 42%, rgba(76, 42, 135, 0.78) 100%);
+    }
+
+    .cover-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 11in;
+      padding: 0.75in 0.8in 0.65in;
+    }
+
+    .cover-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .cover-logo {
+      width: 120px;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.35));
+    }
+
+    .cover-season {
+      text-align: right;
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 11pt;
+      letter-spacing: 0.12em;
+      color: #ffffff;
+    }
+
+    .cover-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 0 0.4in;
+      margin-top: -0.35in;
+    }
+
+    .cover-main h1 {
+      font-size: 34pt;
+      line-height: 1.05;
+      margin-bottom: 18px;
+      max-width: 9em;
+    }
+
+    .cover-main .cover-gap {
+      min-height: 9.25em;
+      margin-bottom: 0;
+    }
+
+    .cover-band {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 36px;
+    }
+
+    .cover-stat {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(168, 123, 255, 0.35);
+      border-radius: 12px;
+      padding: 16px 14px;
+    }
+
+    .cover-stat strong {
+      display: block;
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 18pt;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .cover-stat span {
+      font-size: 8.5pt;
+      color: #ffffff;
+      line-height: 1.35;
+    }
+
+    .cover-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 9pt;
+      color: #ffffff;
+    }
+
+    /* TOC */
+    .toc-list {
+      list-style: none;
+      margin-top: 24px;
+    }
+
+    .toc-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 10.5pt;
+    }
+
+    .toc-num {
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      color: var(--primary);
+      min-width: 24px;
+    }
+
+    .toc-list a.toc-link {
+      color: inherit;
+      text-decoration: none;
+      flex: 1;
+    }
+
+    .toc-list a.toc-link:hover,
+    .toc-list a.toc-link:focus {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    @media print {
+      .toc-list a.toc-link {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    /* Two column */
+    .cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 8px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+
+    .card h4 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 11pt;
+      color: var(--primary-deep);
+      margin-bottom: 8px;
+    }
+
+    .card ul {
+      margin-left: 16px;
+      color: #3a334d;
+    }
+
+    .card li { margin-bottom: 5px; }
+
+    /* Timeline */
+    .timeline {
+      margin: 16px 0;
+      border-left: 3px solid var(--accent);
+      padding-left: 18px;
+    }
+
+    .timeline-item {
+      margin-bottom: 10px;
+      font-size: 9.5pt;
+    }
+
+    .timeline-item strong {
+      color: var(--primary-deep);
+      font-family: 'Chakra Petch', sans-serif;
+    }
+
+    /* Tier table */
+    table.tiers {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 8pt;
+    }
+
+    table.tiers th,
+    table.tiers td {
+      border: 1px solid var(--border);
+      padding: 6px 8px;
+      vertical-align: top;
+    }
+
+    table.tiers thead th {
+      background: linear-gradient(135deg, var(--primary-deep), var(--primary));
+      color: white;
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 10pt;
+      text-align: center;
+    }
+
+    table.tiers tbody tr:nth-child(even) td {
+      background: #faf8fd;
+    }
+
+    table.tiers td:first-child {
+      font-weight: 600;
+      color: var(--primary-deep);
+      width: 28%;
+    }
+
+    .check { color: var(--primary); font-weight: 700; text-align: center; }
+    .dash { color: #bbb; text-align: center; }
+
+    .tier-price {
+      display: block;
+      font-size: 8pt;
+      font-weight: 400;
+      opacity: 0.9;
+      margin-top: 4px;
+    }
+
+    .callout {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(124,68,214,0.08), rgba(168,123,255,0.12));
+      border: 1px solid var(--border);
+      font-size: 9.5pt;
+    }
+
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .partner-chip {
+      text-align: center;
+      padding: 14px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 9pt;
+      color: var(--primary-deep);
+    }
+
+    .contact-block {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, var(--primary-deep), var(--primary));
+      color: white;
+    }
+
+    .contact-block h3 {
+      color: white;
+      margin-top: 0;
+    }
+
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 12px;
+      font-size: 9.5pt;
+    }
+
+    /* Photos */
+    .photo-block {
+      margin-top: 14px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .photo-block img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .photo-block--tall img { height: 1.45in; }
+
+    .photo-block--wide img { height: 2.05in; }
+
+    .photo-block--banner img { height: 1.85in; }
+
+    .photo-caption {
+      padding: 8px 12px;
+      font-size: 8pt;
+      color: var(--muted);
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+
+    .rover-pipeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 14px 0 10px;
+    }
+
+    .rover-slot {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #1a1228;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rover-slot-media {
+      height: 1.55in;
+      overflow: hidden;
+      background: #1a1228;
+    }
+
+    .rover-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .rover-slot .rover-caption {
+      padding: 8px 8px 10px;
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--primary-deep);
+      text-align: center;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      line-height: 1.35;
+    }
+
+    .rover-slot .rover-caption span {
+      display: block;
+      font-weight: 400;
+      color: var(--muted);
+      font-size: 7.5pt;
+      margin-top: 2px;
+    }
+
+    .rover-slot figcaption {
+      padding: 8px 8px 10px;
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--primary-deep);
+      text-align: center;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      line-height: 1.35;
+    }
+
+    .rover-slot figcaption span {
+      display: block;
+      font-weight: 400;
+      color: var(--muted);
+      font-size: 7.5pt;
+      margin-top: 2px;
+    }
+
+    .photo-feature {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+      margin: 12px 0 16px;
+      align-items: center;
+    }
+
+    .photo-feature .photo-feature-media img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      height: 1.85in;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 12px 0;
+    }
+
+    .photo-split .photo-split-item {
+      height: 2.05in;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #1a1228;
+    }
+
+    .photo-split .photo-split-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+      border: 0;
+      display: block;
+    }
+
+    .photo-split-item--pdb img {
+      object-position: 52% 50%;
+    }
+
+    .photo-split-item--gen3 img {
+      object-position: 50% 58%;
+      transform: scale(1.08);
+    }
+
+    /* Last page — tighten spacing to avoid PDF overflow */
+    .page--closing .page-inner {
+      padding-bottom: 0.52in;
+    }
+
+    .page--closing h2 { margin-bottom: 10px; }
+
+    .page--closing p { margin-bottom: 8px; }
+
+    .page--closing .cols {
+      gap: 14px;
+      margin-top: 4px;
+    }
+
+    .page--closing .card {
+      padding: 12px 14px;
+    }
+
+    .page--closing .card li { margin-bottom: 3px; }
+
+    .page--closing h3 { margin: 12px 0 6px; }
+
+    .page--closing .partner-grid {
+      margin-top: 8px;
+      gap: 10px;
+    }
+
+    .page--closing .partner-chip {
+      padding: 10px 8px;
+    }
+
+    .page--closing .contact-block {
+      margin-top: 12px;
+      padding: 14px 16px;
+    }
+
+    .page--closing .contact-grid {
+      margin-top: 8px;
+      gap: 10px;
+      font-size: 9pt;
+    }
+
+    .page--closing .closing-note {
+      margin-top: 10px;
+      margin-bottom: 0;
+      font-size: 8.5pt;
+      line-height: 1.4;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media print {
+      body { background: white; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1: COVER -->
+  <section class="page cover">
+    <div class="cover-bg" aria-hidden="true">
+      <img src="assets/photos/Rover_Competing_CIRC2025_lite.jpg" alt="">
+    </div>
+    <div class="cover-scrim" aria-hidden="true"></div>
+    <div class="cover-content">
+    <div class="cover-top">
+      <img class="cover-logo" src="assets/WEMARS_Logo_New.png" alt="WEMARS logo">
+      <div class="cover-season">2026 / 2027 SEASON</div>
+    </div>
+    <div class="cover-main">
+      <div class="eyebrow" style="color: var(--accent);">Western Engineering Mobile Advanced Robotics Society</div>
+      <h1>Sponsorship Package</h1>
+      <div class="cover-gap" aria-hidden="true"></div>
+      <div class="cover-band">
+        <div class="cover-stat">
+          <strong>50+</strong>
+          <span>Active members during the academic year</span>
+        </div>
+        <div class="cover-stat">
+          <strong>2</strong>
+          <span>CIRC competitor; applying to URC</span>
+        </div>
+        <div class="cover-stat">
+          <strong>Gen 3</strong>
+          <span>All-new rover with swivel drive &amp; 6-DOF arm</span>
+        </div>
+      </div>
+    </div>
+    <div class="cover-bottom">
+      <span>wemars.org &nbsp;·&nbsp; wemars@uwo.ca</span>
+      <span>1151 Richmond St, London, ON N6A 3K7</span>
+    </div>
+    </div>
+  </section>
+
+  <!-- PAGE 2: TOC + ABOUT -->
+  <section class="page">
+    <div class="page-inner">
+      <span class="eyebrow">Contents</span>
+      <h2>Inside this <span class="grad">package</span></h2>
+      <ol class="toc-list">
+        <li><span class="toc-num">01</span> <a class="toc-link" href="#about-wemars">About WEMARS</a></li>
+        <li><span class="toc-num">02</span> <a class="toc-link" href="#journey">Our competition journey</a></li>
+        <li><span class="toc-num">03</span> <a class="toc-link" href="#gen3-rover">2026/2027 season &amp; rover overview</a></li>
+        <li><span class="toc-num">04</span> <a class="toc-link" href="#why-partner">Why partner with us</a></li>
+        <li><span class="toc-num">05</span> <a class="toc-link" href="#where-support-goes">Where your support goes</a></li>
+        <li><span class="toc-num">06</span> <a class="toc-link" href="#sponsorship-tiers">Sponsorship tiers: Bronze, Silver, Gold</a></li>
+        <li><span class="toc-num">07</span> <a class="toc-link" href="#in-kind-partnerships">In-kind &amp; custom partnerships</a></li>
+        <li><span class="toc-num">08</span> <a class="toc-link" href="#get-involved">How to get involved</a></li>
+      </ol>
+
+    </div>
+    <div class="page-footer">
+      <span>WEMARS Sponsorship Package · 2026/2027</span>
+      <span>wemars@uwo.ca</span>
+      <span>Page 2</span>
+    </div>
+  </section>
+
+  <!-- PAGE 3: ABOUT -->
+  <section class="page" id="about-wemars">
+    <div class="page-inner">
+      <span class="eyebrow">Who we are</span>
+      <h2>About <span class="grad">WEMARS</span></h2>
+
+      <p>WEMARS (Western Engineering Mobile Advanced Robotics Society) is a student-led, multidisciplinary engineering team at Western University. Founded in 2010, we began by helping establish London's first FIRST Robotics Competition teams. Our first Mars rover followed in 2017. We debuted at CIRC in 2018 (10th of ~14 teams), then returned in 2024 after a long hiatus. Today, we design, build, and test Mars-analog rovers engineered entirely in-house.</p>
+      <p>Our team spans mechanical, electrical, software, science, and business subteams, each responsible for a critical part of the rover and the organization behind it. During the school year we typically field around <strong>50 members</strong>, with a core group of roughly <strong>15 students</strong> continuing development through the summer.</p>
+      <p>We compete at the <strong>Canadian International Rover Challenge (CIRC)</strong> in Alberta and are applying to compete at the <strong>University Rover Challenge (URC)</strong> in Utah for the 2026/2027 season, two of the most demanding university robotics competitions in the world. Tasks include autonomous navigation, robotic arm manipulation, science sample analysis, equipment servicing, and search &amp; rescue scenarios across harsh, Mars-like terrain.</p>
+
+      <div class="cols">
+        <div class="card">
+          <h4>Leadership structure</h4>
+          <ul>
+            <li>President &amp; Vice-Presidents</li>
+            <li>Dual leads per subsystem (Mech, Electrical, Software)</li>
+            <li>Business, Science &amp; outreach coordinators</li>
+            <li>Project-based teams within each subteam</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>What we build in-house</h4>
+          <ul>
+            <li>Chassis, drivetrain &amp; robotic arm</li>
+            <li>Power distribution &amp; custom PCBs</li>
+            <li>Autonomy, vision &amp; control software (ROS2)</li>
+            <li>Science payload &amp; sample handling</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="photo-block photo-block--tall">
+        <img src="assets/photos/WEMARS_General_Meeting_lite.jpg" alt="WEMARS general meeting at Western University">
+        <div class="photo-caption">WEMARS general meeting at Western University. Our team typically fields 50+ members during the academic year.</div>
+      </div>
+    </div>
+    <div class="page-footer">
+      <span>WEMARS Sponsorship Package · 2026/2027</span>
+      <span>wemars@uwo.ca</span>
+      <span>Page 3</span>
+    </div>
+  </section>
+
+  <!-- PAGE 4: JOURNEY + ROVER PIPELINE -->
+  <section class="page" id="journey">
+    <div class="page-inner">
+      <span class="eyebrow">Our story</span>
+      <h2>From rebuild to <span class="grad">top 5</span></h2>
+      <p class="lead">Our first rover was built in 2017. We competed at CIRC in 2018, then stepped away through COVID and rebuild years—though members kept designing in CAD and planning for a lighter, modular chassis. We returned to Drumheller in 2024 after a long competition hiatus, rebuilt membership to 50+, and are now designing Gen 3 from the ground up. Our goal when we return next summer: a top-five finish at CIRC.</p>
+
+      <h3>Three generations of rovers</h3>
+      <p>Our current platform line reflects that rebuild: each generation since our return has taught us what to carry forward and what to rethink entirely.</p>
+
+      <div class="rover-pipeline">
+        <div class="rover-slot">
+          <div class="rover-slot-media"><img src="assets/photos/GEN1Rover.png" alt="Generation 1 WEMARS rover at CIRC 2024"></div>
+          <div class="rover-caption">Generation 1<span>Rocker-bogie · CIRC 2024 · 27th of 28 teams</span></div>
+        </div>
+        <div class="rover-slot">
+          <div class="rover-slot-media"><img src="assets/photos/GEN2Rover.jpg" alt="Generation 2 WEMARS rover"></div>
+          <div class="rover-caption">Generation 2<span>Competition rover · CIRC 2025 · 15th of 26 teams</span></div>
+        </div>
+        <div class="rover-slot rover-slot--gen3">
+          <div class="rover-slot-media"><img src="assets/photos/Gen3Rover2_lite.jpg" alt="Generation 3 WEMARS rover render"></div>
+          <div class="rover-caption">Generation 3<span>Swivel drive · Spark Flex · 6-DOF arm in build</span></div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>CIRC 2024 (Gen 1)</strong><br>
+          Competed with our Gen 1 rover and placed <strong>27th of 28 teams</strong> (27.17 pts) in our first CIRC back after the hiatus. Tough results, but critical lessons that shaped every design decision since.
+        </div>
+        <div class="timeline-item">
+          <strong>CIRC 2025 (Gen 2)</strong><br>
+          Jumped to <strong>15th of 26 teams</strong> (126.03 pts), including a strong reactor maintenance run, proving how fast the team could iterate between builds.
+        </div>
+        <div class="timeline-item">
+          <strong>2025/2026: Build year</strong><br>
+          Competition hiatus dedicated to designing and manufacturing our third rover with no shortcuts and no legacy compromises.
+        </div>
+        <div class="timeline-item">
+          <strong>2026/2027: Return to competition</strong><br>
+          Targeting a <strong>top-five finish</strong> at CIRC and applying to compete at URC with a rover built for every core task.
+        </div>
+      </div>
+    </div>
+    <div class="page-footer">
+      <span>WEMARS Sponsorship Package · 2026/2027</span>
+      <span>wemars@uwo.ca</span>
+      <span>Page 4</span>
+    </div>
+  </section>
+
+  <!-- PAGE 5: GEN 3 ROVER -->
+  <section class="page" id="gen3-rover">
+    <div class="page-inner">
+      <span class="eyebrow">2026/2027 build</span>
+      <h2>Third-generation <span class="grad">rover</span></h2>
+
+      <h3>Third-generation rover highlights</h3>
+      <p>Our new platform represents a major step forward in mobility, manipulation, and onboard electronics, optimized for competition performance at roughly <strong>22 kg</strong>.</p>
+
+      <div class="photo-split">
+        <div class="photo-split-item photo-split-item--pdb">
+          <img src="../images/Sponsorship_packge_Images/New_PDB_Image.png" alt="WEMARS Gen 3 power distribution motherboard">
+        </div>
+        <div class="photo-split-item photo-split-item--gen3">
+          <img src="../images/Sponsorship_packge_Images/GEN3Rover.png" alt="Generation 3 WEMARS rover CAD render">
+        </div>
+      </div>
+      <p class="photo-caption" style="margin: -4px 0 12px; padding: 0; border: 0; background: transparent;">Left: Gen 3 power distribution motherboard (V4.0). Right: Gen 3 CAD render, currently in manufacturing.</p>
+
+      <div class="cols">
+        <div class="card">
+          <h4>Mechanical</h4>
+          <ul>
+            <li><strong>Swivel drive</strong> using Robstride EduLite 05 modules for omnidirectional agility</li>
+            <li><strong>REV Vortex</strong> motors, upgraded from in-hub motors for better control and serviceability</li>
+            <li><strong>6-DOF robotic arm</strong> currently in build; designed for dexterity tasks and payload swaps</li>
+            <li>Newly designed chassis optimized for weight, saving ~1.2 kg over the prior generation</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Electrical &amp; software</h4>
+          <ul>
+            <li><strong>PDB motherboard</strong> supporting 6S LiPo, CAN communication, and modular daughterboards for the arm and GNSS</li>
+            <li><strong>GNSS with RTK</strong> using the u-blox ZED-F9P for centimeter-level positioning onboard</li>
+            <li><strong>ROS2 stack</strong> integrating LiDAR, cameras, and IMU data for localization and autonomous navigation</li>
+            <li><strong>Custom C++ WebRTC stack</strong> for low-latency video and telemetry streaming to the operator control station</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top: 10px; padding: 10px 14px; font-size: 9pt;">
+        <strong>Outreach &amp; visibility:</strong> This season we're expanding beyond the lab, including Western's Open House, public demo days, and sponsor-hosted events that connect our team with the community and your brand.
+      </div>
+    </div>
+    <div class="page-footer">
+      <span>WEMARS Sponsorship Package · 2026/2027</span>
+      <span>wemars@uwo.ca</span>
+      <span>Page 5</span>
+    </div>
+  </section>
+
+  <!-- PAGE 6: WHY PARTNER + WHERE FUNDS GO -->
+  <section class="page" id="why-partner">
+    <div class="page-inner">
+      <span class="eyebrow">Partnership value</span>
+      <h2>Why sponsor <span class="grad">WEMARS</span></h2>
+
+      <div class="photo-feature">
+        <div class="photo-feature-media">
+          <img src="assets/photos/electrical_team_workshop_lite.jpg" alt="WEMARS electrical subteam working in the lab">
+        </div>
+        <div>
+          <h3 style="margin-top: 0;">Student-led engineering</h3>
+          <p>Our members design, solder, machine, and test real hardware every week. Sponsors support that hands-on pipeline from concept to competition, not a classroom exercise.</p>
+          <p>From oscilloscope bring-up to field testing, WEMARS is where Western engineering students learn by building.</p>
+        </div>
+      </div>
+
+      <div class="cols">
+        <div>
+          <h3>Brand &amp; community</h3>
+          <p>Your logo travels with us on the rover, at competition, across our website, and through social media seen by students, faculty, industry, and competition audiences across North America.</p>
+          <h3>Talent pipeline</h3>
+          <p>Our members graduate into mechanical, electrical, software, and systems roles across aerospace, robotics, automotive, and tech. Silver and Gold partners receive access to our <strong>resume book</strong> and recruiting touchpoints.</p>
+        </div>
+        <div>
+          <h3>Real engineering, real results</h3>
+          <p>Sponsors don't fund a slide deck. They fund CAD, machining, PCB spins, field tests, and competition runs. We share progress updates, photos, and post-season reports so you see the impact.</p>
+          <h3>Flexible partnerships</h3>
+          <p>Cash, in-kind parts, machining time, and services all count. We work with startups, local shops, and national firms, and we'll tailor a package that fits your goals.</p>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer">
+      <span>WEMARS Sponsorship Package · 2026/2027</span>
+      <span>wemars@uwo.ca</span>
+      <span>Page 6</span>
+    </div>
+  </section>
+
+  <!-- PAGE 7: WHERE FUNDS GO -->
+  <section class="page" id="where-support-goes">
+    <div class="page-inner">
+      <span class="eyebrow">Your impact</span>
+      <h2>Where your support <span class="grad">goes</span></h2>
+
+      <p>We don't ask sponsors to fund a single line item. Your contribution strengthens the whole program. Here is how resources are typically allocated across a competition season:</p>
+
+      <div class="cols" style="margin-top: 10px;">
+        <div class="card">
+          <h4>Rover development</h4>
+          <ul>
+            <li>Mechanical materials, fasteners &amp; arm components</li>
+            <li>Motors, motor controllers &amp; drivetrain parts</li>
+            <li>Electrical components, PCBs &amp; batteries</li>
+            <li>Prototyping, machining &amp; fabrication</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Competition &amp; operations</h4>
+          <ul>
+            <li>Travel, lodging &amp; registration (CIRC; URC if accepted)</li>
+            <li>Team apparel, pit equipment &amp; field tools</li>
+            <li>Outreach events &amp; university engagement</li>
+            <li>Software tooling &amp; testing infrastructure</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        Sponsorship directly enables us to compete at the highest level, iterate faster between tests, and represent Western University and our partners on the international stage.
+      </div>
+    </div>
+    <div class="page-footer">
+      <span>WEMARS Sponsorship Package · 2026/2027</span>
+      <span>wemars@uwo.ca</span>
+      <span>Page 7</span>
+    </div>
+  </section>
+
+  <!-- PAGE 8: TIERS -->
+  <section class="page" id="sponsorship-tiers">
+    <div class="page-inner">
+      <span class="eyebrow">Sponsorship levels</span>
+      <h2>Bronze · Silver · <span class="grad">Gold</span></h2>
+      <p class="lead">Three clear tiers designed for companies of any size. In-kind contributions are valued at fair market rate and may qualify for the equivalent tier. Custom packages are always available. Contact us to discuss.</p>
+
+      <table class="tiers">
+        <thead>
+          <tr>
+            <th>Benefit</th>
+            <th>Bronze<span class="tier-price">$500+ CAD</span></th>
+            <th>Silver<span class="tier-price">$1,500+ CAD</span></th>
+            <th>Gold<span class="tier-price">$3,000+ CAD</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Logo on website sponsor page</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+            <td class="check">✓ Featured placement</td>
+          </tr>
+          <tr>
+            <td>Logo on competition rover</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+            <td class="check">✓ Prominent placement</td>
+          </tr>
+          <tr>
+            <td>Logo on team apparel</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+            <td class="check">✓ Prominent placement</td>
+          </tr>
+          <tr>
+            <td>Competition pit / display banner</td>
+            <td class="dash">No</td>
+            <td class="check">✓</td>
+            <td class="check">✓ Featured placement</td>
+          </tr>
+          <tr>
+            <td>Social media recognition<br><small>(LinkedIn &amp; Instagram)</small></td>
+            <td class="dash">No</td>
+            <td class="check">2 posts + comp. updates</td>
+            <td class="check">Dedicated campaign + thank-you content</td>
+          </tr>
+          <tr>
+            <td>Outreach &amp; Open House visibility</td>
+            <td class="check">Logo displayed</td>
+            <td class="check">Logo + mention</td>
+            <td class="check">Co-branded event opportunity</td>
+          </tr>
+          <tr>
+            <td>Invite to rover testing &amp; demo days</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+            <td class="check">✓ VIP / private demo</td>
+          </tr>
+          <tr>
+            <td>Resume book &amp; talent pipeline access</td>
+            <td class="dash">No</td>
+            <td class="check">✓</td>
+            <td class="check">✓ Priority + recruiting touchpoint</td>
+          </tr>
+          <tr>
+            <td>Post-competition impact report</td>
+            <td class="dash">No</td>
+            <td class="dash">No</td>
+            <td class="check">✓ Personalized report + photo package</td>
+          </tr>
+          <tr>
+            <td>Exclusive in-kind provider recognition<br><small>(parts / services)</small></td>
+            <td class="check">By agreement</td>
+            <td class="check">By agreement</td>
+            <td class="check">Preferred partner status</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout" style="margin-top: 14px;">
+        <strong>Not sure which tier fits?</strong> Many partners start with in-kind support (materials, machining, components, or services) and grow over time. Reach out and we'll find an arrangement that works for both sides.
+      </div>
+    </div>
+    <div class="page-footer">
+      <span>WEMARS Sponsorship Package · 2026/2027</span>
+      <span>wemars@uwo.ca</span>
+      <span>Page 8</span>
+    </div>
+  </section>
+
+  <!-- PAGE 9: IN-KIND + CONTACT -->
+  <section class="page page--closing" id="in-kind-partnerships">
+    <div class="page-inner">
+      <span class="eyebrow">Beyond tiers</span>
+      <h2>In-kind &amp; <span class="grad">custom</span> partnerships</h2>
+      <p>Hardware, fabrication, and expertise are just as valuable as cash. If your company can help in any of the areas below, let's talk about a partnership package with recognition at the appropriate tier.</p>
+
+      <div class="cols">
+        <div class="card">
+          <h4>Mechanical &amp; fabrication</h4>
+          <ul>
+            <li>CNC machining, waterjet &amp; laser cutting</li>
+            <li>Aluminum stock, fasteners &amp; hardware</li>
+            <li>Arm components &amp; structural materials</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Electrical &amp; components</h4>
+          <ul>
+            <li>Motors, motor controllers &amp; power electronics</li>
+            <li>PCB fabrication &amp; assembly</li>
+            <li>Batteries, sensors &amp; wiring supplies</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Services &amp; software</h4>
+          <ul>
+            <li>Engineering consulting &amp; design review</li>
+            <li>Cloud / compute credits</li>
+            <li>Travel or logistics support</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Named opportunities</h4>
+          <ul>
+            <li>Robotic arm subsystem sponsor</li>
+            <li>Swivel drive / mobility sponsor</li>
+            <li>Competition travel sponsor</li>
+            <li>Open House &amp; outreach event sponsor</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Current &amp; recent partners</h3>
+      <p>We're grateful to the organizations already backing our mission:</p>
+      <div class="partner-grid">
+        <div class="partner-chip">XP Power</div>
+        <div class="partner-chip">Protospace MFG</div>
+        <div class="partner-chip">University Students' Council</div>
+      </div>
+
+      <div class="contact-block" id="get-involved">
+        <h3>Ready to partner with WEMARS?</h3>
+        <p style="color: rgba(255,255,255,0.92); margin-bottom: 0;">We'd love to hear from you. Whether you're exploring Bronze sponsorship or a custom Gold partnership, our business team will respond promptly with next steps.</p>
+        <div class="contact-grid">
+          <div>
+            <strong>Email</strong><br>
+            <a href="mailto:wemars@uwo.ca">wemars@uwo.ca</a>
+          </div>
+          <div>
+            <strong>Website</strong><br>
+            <a href="https://www.wemars.org">wemars.org</a>
+          </div>
+          <div>
+            <strong>LinkedIn</strong><br>
+            <a href="https://www.linkedin.com/company/western-engineering-mars-rover-team/">Western Engineering Mars Rover Team</a>
+          </div>
+          <div>
+            <strong>Instagram</strong><br>
+            <a href="https://www.instagram.com/we.mars/">@we.mars</a>
+          </div>
+          <div>
+            <strong>Location</strong><br>
+            1151 Richmond St, London, ON N6A 3K7
+          </div>
+          <div>
+            <strong>Timeline</strong><br>
+            Partnerships welcome through June 2027
+          </div>
+        </div>
+      </div>
+
+      <p class="closing-note">
+        WEMARS · Western Engineering Mobile Advanced Robotics Society · Western University<br>
+        Sponsorship terms finalized upon mutual agreement. Benefits fulfilled throughout the 2026/2027 competition season.
+      </p>
+    </div>
+    <div class="page-footer">
+      <span>WEMARS Sponsorship Package · 2026/2027</span>
+      <span>wemars@uwo.ca</span>
+      <span>Page 9</span>
+    </div>
+  </section>
+
+</body>
+</html>
