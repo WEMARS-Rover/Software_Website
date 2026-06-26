@@ -112,13 +112,27 @@ textarea:focus-visible {
   min-height: 100vh;
   width: 100%;
   background-image:
-    linear-gradient(180deg, rgba(5,6,10,0.45) 0%, rgba(5,6,10,0.55) 50%, var(--bg) 100%),
-    radial-gradient(900px 500px at 50% 25%, rgba(124,68,214,0.28), transparent 70%),
+    radial-gradient(900px 520px at 50% 38%, rgba(124, 68, 214, 0.26), transparent 68%),
     url(images/Benny-home.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
   overflow: hidden;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(5, 6, 10, 0.2) 58%,
+    rgba(5, 6, 10, 0.78) 86%,
+    var(--bg) 100%
+  );
 }
 
 /*Fancy title aka magic lol (Three.js particle canvas)*/
@@ -496,6 +510,47 @@ textarea:focus-visible {
 
 .section {
   padding: clamp(60px, 9vw, 130px) 0;
+}
+
+#intro,
+.sub-header:not(#mechanical-page) + .team-wrap,
+.sub-header:not(#mechanical-page) + .section,
+.sub-header:not(#mechanical-page) + .join-section,
+.sub-header:not(#mechanical-page) + .sec-01 {
+  position: relative;
+  margin-top: -1px;
+}
+
+#intro::before,
+.sub-header:not(#mechanical-page) + .team-wrap::before,
+.sub-header:not(#mechanical-page) + .section::before,
+.sub-header:not(#mechanical-page) + .join-section::before,
+.sub-header:not(#mechanical-page) + .sec-01::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: clamp(160px, 22vh, 280px);
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    var(--bg) 0%,
+    var(--bg) 12%,
+    rgba(5, 6, 10, 0.94) 32%,
+    rgba(5, 6, 10, 0.55) 58%,
+    transparent 100%
+  );
+}
+
+#intro > .container,
+.sub-header:not(#mechanical-page) + .team-wrap > *,
+.sub-header:not(#mechanical-page) + .section > *,
+.sub-header:not(#mechanical-page) + .join-section > *,
+.sub-header:not(#mechanical-page) + .sec-01 > * {
+  position: relative;
+  z-index: 1;
 }
 
 .section-eyebrow {
@@ -1007,11 +1062,31 @@ nav img:hover{
 .sub-header{
   height: 50vh;
   width: 100%;
-  background-image: linear-gradient(rgba(5,6,10,0.55), rgba(5,6,10,0.9)), url(images/TeamPicSub.png);
+  background-image:
+    radial-gradient(900px 520px at 50% 40%, rgba(124, 68, 214, 0.18), transparent 65%),
+    url(images/TeamPicSub.png);
   background-position: center;
   background-size: cover;
   text-align: center;
   color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.sub-header:not(#mechanical-page)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 6, 10, 0.85) 0%,
+    rgba(5, 6, 10, 0.60) 34%,
+    rgba(5, 6, 10, 0.53) 58%,
+    rgba(5, 6, 10, 0.95) 86%,
+    var(--bg) 100%
+  );
 }
 
 .sub-header h1{

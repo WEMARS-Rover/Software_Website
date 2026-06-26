@@ -1,14 +1,10 @@
-.sub-header--join {
-  height: 38vh;
-  min-height: 280px;
-}
-
 .join-section {
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: calc(62vh - 40px);
-  padding: 48px 20px 80px;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: calc(50vh - 40px);
+  padding: 112px 20px 80px;
   padding-bottom: max(80px, 10vh);
   background-color: var(--bg);
   background-image:
@@ -197,14 +193,9 @@
 }
 
 @media (max-width: 800px) {
-  .sub-header--join {
-    height: 32vh;
-    min-height: 220px;
-  }
-
   .join-section {
     min-height: auto;
-    padding-top: 32px;
+    padding-top: 72px;
   }
 
   .join-card {

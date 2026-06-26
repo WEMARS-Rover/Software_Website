@@ -77,12 +77,11 @@
                 <div class = "subtext-box">
                     <h3>Electrical</h3>
                     <p>We handle all the hardware on the rover and build a lot of it in-house: power distribution,
-                        motor control, GPS, IMUs, and more. Team members pick up PCB design in Altium, embedded systems,
+                        GPS, IMUs, CAN communication, and more. Team members pick up PCB design in Altium, embedded systems,
                         circuit protection, and getting different boards talking to each other.</p>
                     <p>We keep the arm and motors powered for mechanical and run the sensors and computers software
                         needs, so staying in sync with the other subteams is a big part of the job. This year we're
-                        focused on tightening up power distribution and getting a solid first version of our motor
-                        controls.</p>
+                        focused on our upgraded PDB and a modular board architecture that reduces wiring across the rover.</p>
                 </div>
             </div>
 
@@ -169,12 +168,15 @@
         <h2>Electrical Subsystem</h2>
         <div class="m-card-body">
             <div class="m-card-text">
-                <p>Latest progress updates for the electrical subteam will be posted here. Add photos of PCB builds, power distribution milestones, motor controller testing, and wiring integration.</p>
+                <p>We are upgrading our power distribution board to support 6S LiPo batteries and evolving it into a central motherboard that handles power distribution, CAN communication, and other core rover electronics. Our GNSS and arm boards now plug directly into the PDB, improving modularity and reducing wiring across the rover.</p>
             </div>
-            <div class="m-card-images m-card-images--template">
-                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
-                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
-                <div class="m-card-placeholder"><i class="fa-solid fa-image"></i><span>Progress photo</span></div>
+            <div class="m-card-images">
+                <img src="./images/Electrical/PDB.png" alt="Power distribution board">
+                <img src="./images/Electrical/GNSS.png" alt="GNSS board">
+                <img src="./images/Electrical/ArmBoard.png" alt="Arm board">
+            </div>
+            <div class="m-card-text">
+                <p>We also built a new GNSS board around the u-blox ZED-F9P, bringing centimeter-level positioning accuracy onboard the rover.</p>
             </div>
         </div>
     </div>
