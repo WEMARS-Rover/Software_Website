@@ -597,7 +597,7 @@ textarea:focus-visible {
 
 .feature.reverse .feature-media { order: 2; }
 
-.feature-media img {
+.feature-media > img {
   width: 100%;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
@@ -950,16 +950,28 @@ nav img:hover{
   position: relative;
 }
 
+.slideshow-container::before {
+  content: "";
+  display: block;
+  aspect-ratio: 3 / 2;
+}
+
 .slideshow-container img {
   width: 100%;
-  aspect-ratio: 3 / 2;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
-  overflow: hidden;
+  position: absolute;
+  inset: 0;
 }
 
 /* On hover, add a black background color with a little bit see-through */
