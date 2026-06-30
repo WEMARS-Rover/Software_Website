@@ -10,6 +10,7 @@
     const errorEl = document.getElementById('join-error');
     const successEl = document.getElementById('join-success');
     const successMessageEl = document.getElementById('join-success-message');
+    const successEmailEl = document.getElementById('join-success-email');
     const noticeEl = document.getElementById('join-notice');
     const submitBtn = document.getElementById('join-submit');
 
@@ -25,9 +26,12 @@
         if (errorEl) errorEl.hidden = true;
         if (successEl) successEl.hidden = false;
         if (form) form.hidden = true;
-        if (successMessageEl && email) {
+        if (successMessageEl) {
             successMessageEl.textContent =
-                'Check your inbox. We sent the Discord invite link to ' + email + '.';
+                'Check your inbox for the Discord invite link. If you do not see it, check your junk or spam folder.';
+        }
+        if (successEmailEl && email) {
+            successEmailEl.textContent = 'We sent it to ' + email + '.';
         }
     }
 

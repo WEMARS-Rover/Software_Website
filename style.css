@@ -2846,11 +2846,23 @@ textarea.form-control{
 
 .sponsor-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: clamp(16px, 2.5vw, 24px);
   max-width: 960px;
   margin-top: 14px;
   margin-inline: auto;
+}
+
+.sponsor-card {
+  grid-column: span 2;
+}
+
+.sponsor-card:nth-child(7) {
+  grid-column: 2 / span 2;
+}
+
+.sponsor-card:nth-child(8) {
+  grid-column: 4 / span 2;
 }
 
 .sponsor-card {
@@ -2897,6 +2909,12 @@ textarea.form-control{
   .sponsor-grid {
     grid-template-columns: repeat(2, 1fr);
     max-width: 640px;
+  }
+
+  .sponsor-card,
+  .sponsor-card:nth-child(7),
+  .sponsor-card:nth-child(8) {
+    grid-column: auto;
   }
 }
 
