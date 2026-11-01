@@ -365,22 +365,32 @@
       font-size: 9.5pt;
     }
 
-    .partner-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 14px;
+    .sponsor-chip-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
     }
 
-    .partner-chip {
-      text-align: center;
-      padding: 14px 10px;
-      border-radius: 10px;
+    .sponsor-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
       border: 1px solid var(--border);
       background: var(--surface);
       font-weight: 600;
       font-size: 9pt;
       color: var(--primary-deep);
+      white-space: nowrap;
+    }
+
+    .sponsor-chip--featured {
+      background: linear-gradient(135deg, rgba(124, 68, 214, 0.12), rgba(168, 123, 255, 0.16));
+      border-color: rgba(124, 68, 214, 0.35);
+      color: var(--primary-deep);
+      font-weight: 700;
     }
 
     .contact-block {
@@ -408,6 +418,55 @@
       gap: 16px;
       margin-top: 12px;
       font-size: 9.5pt;
+    }
+
+    .payment-block {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .payment-block h3 {
+      margin: 0 0 6px;
+      font-size: 11pt;
+    }
+
+    .payment-block p {
+      margin: 0 0 6px;
+      font-size: 9pt;
+      line-height: 1.45;
+    }
+
+    .payment-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .payment-address {
+      margin: 8px 0 !important;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--border);
+      font-size: 9pt !important;
+      line-height: 1.5 !important;
+    }
+
+    .payment-address--on-dark {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+      color: #fff;
+      margin: 6px 0 !important;
+      padding: 6px 10px;
+      font-size: 8.5pt !important;
+      line-height: 1.4 !important;
+    }
+
+    .payment-block a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
     }
 
     /* Photos */
@@ -556,52 +615,74 @@
       transform: scale(1.08);
     }
 
-    /* Last page — tighten spacing to avoid PDF overflow */
+    /* Last page — clear footer (absolute) so closing text is not clipped */
     .page--closing .page-inner {
-      padding-bottom: 0.52in;
+      padding-bottom: 0.95in;
+      min-height: 0;
     }
 
-    .page--closing h2 { margin-bottom: 10px; }
+    .page--closing h2 { margin-bottom: 6px; }
 
-    .page--closing p { margin-bottom: 8px; }
+    .page--closing > .page-inner > p { margin-bottom: 6px; font-size: 9.5pt; }
 
     .page--closing .cols {
-      gap: 14px;
-      margin-top: 4px;
+      gap: 10px;
+      margin-top: 2px;
     }
 
     .page--closing .card {
-      padding: 12px 14px;
+      padding: 8px 10px;
     }
 
-    .page--closing .card li { margin-bottom: 3px; }
-
-    .page--closing h3 { margin: 12px 0 6px; }
-
-    .page--closing .partner-grid {
-      margin-top: 8px;
-      gap: 10px;
+    .page--closing .card h4 {
+      margin: 0 0 4px;
+      font-size: 9.5pt;
     }
 
-    .page--closing .partner-chip {
-      padding: 10px 8px;
+    .page--closing .card li {
+      margin-bottom: 1px;
+      font-size: 8.5pt;
+    }
+
+    .page--closing h3 { margin: 10px 0 4px; font-size: 11pt; }
+
+    .page--closing .sponsor-chip-grid {
+      margin-top: 6px;
+      margin-bottom: 2px;
+      gap: 7px;
+    }
+
+    .page--closing .sponsor-chip {
+      padding: 7px 12px;
+      font-size: 8.5pt;
     }
 
     .page--closing .contact-block {
       margin-top: 12px;
-      padding: 14px 16px;
+      padding: 12px 14px;
     }
 
-    .page--closing .contact-grid {
-      margin-top: 8px;
-      gap: 10px;
-      font-size: 9pt;
+    .page--closing .contact-block h3 {
+      margin-bottom: 6px;
+      font-size: 12pt;
+    }
+
+    .page--closing .contact-block p {
+      font-size: 8.5pt;
+      line-height: 1.4;
+    }
+
+    .page--closing .payment-address--on-dark {
+      margin: 6px 0 !important;
+      padding: 6px 10px;
+      font-size: 8.5pt !important;
+      line-height: 1.4 !important;
     }
 
     .page--closing .closing-note {
       margin-top: 10px;
       margin-bottom: 0;
-      font-size: 8.5pt;
+      font-size: 8pt;
       line-height: 1.4;
       color: var(--muted);
       text-align: center;
@@ -664,10 +745,10 @@
         <li><span class="toc-num">01</span> <a class="toc-link" href="#about-wemars">About WEMARS</a></li>
         <li><span class="toc-num">02</span> <a class="toc-link" href="#journey">Our competition journey</a></li>
         <li><span class="toc-num">03</span> <a class="toc-link" href="#gen3-rover">2026/2027 season &amp; rover overview</a></li>
-        <li><span class="toc-num">04</span> <a class="toc-link" href="#why-partner">Why partner with us</a></li>
+        <li><span class="toc-num">04</span> <a class="toc-link" href="#why-sponsor">Why sponsor with us</a></li>
         <li><span class="toc-num">05</span> <a class="toc-link" href="#where-support-goes">Where your support goes</a></li>
         <li><span class="toc-num">06</span> <a class="toc-link" href="#sponsorship-tiers">Sponsorship tiers: Bronze, Silver, Gold</a></li>
-        <li><span class="toc-num">07</span> <a class="toc-link" href="#in-kind-partnerships">In-kind &amp; custom partnerships</a></li>
+        <li><span class="toc-num">07</span> <a class="toc-link" href="#in-kind-sponsorships">In-kind &amp; custom sponsorships</a></li>
         <li><span class="toc-num">08</span> <a class="toc-link" href="#get-involved">How to get involved</a></li>
       </ol>
 
@@ -824,10 +905,10 @@
     </div>
   </section>
 
-  <!-- PAGE 6: WHY PARTNER + WHERE FUNDS GO -->
-  <section class="page" id="why-partner">
+  <!-- PAGE 6: WHY SPONSOR + WHERE FUNDS GO -->
+  <section class="page" id="why-sponsor">
     <div class="page-inner">
-      <span class="eyebrow">Partnership value</span>
+      <span class="eyebrow">Sponsorship value</span>
       <h2>Why sponsor <span class="grad">WEMARS</span></h2>
 
       <div class="photo-feature">
@@ -846,12 +927,12 @@
           <h3>Brand &amp; community</h3>
           <p>Your logo travels with us on the rover, at competition, across our website, and through social media seen by students, faculty, industry, and competition audiences across North America.</p>
           <h3>Talent pipeline</h3>
-          <p>Our members graduate into mechanical, electrical, software, and systems roles across aerospace, robotics, automotive, and tech. Silver and Gold partners receive access to our <strong>resume book</strong> and recruiting touchpoints.</p>
+          <p>Our members graduate into mechanical, electrical, software, and systems roles across aerospace, robotics, automotive, and tech. Silver and Gold sponsors receive access to our <strong>resume book</strong> and recruiting touchpoints.</p>
         </div>
         <div>
           <h3>Real engineering, real results</h3>
           <p>Sponsors don't fund a slide deck. They fund CAD, machining, PCB spins, field tests, and competition runs. We share progress updates, photos, and post-season reports so you see the impact.</p>
-          <h3>Flexible partnerships</h3>
+          <h3>Flexible sponsorships</h3>
           <p>Cash, in-kind parts, machining time, and services all count. We work with startups, local shops, and national firms, and we'll tailor a package that fits your goals.</p>
         </div>
       </div>
@@ -893,7 +974,7 @@
       </div>
 
       <div class="callout">
-        Sponsorship directly enables us to compete at the highest level, iterate faster between tests, and represent Western University and our partners on the international stage.
+        Sponsorship directly enables us to compete at the highest level, iterate faster between tests, and represent Western University and our sponsors on the international stage.
       </div>
     </div>
     <div class="page-footer">
@@ -978,13 +1059,13 @@
             <td>Exclusive in-kind provider recognition<br><small>(parts / services)</small></td>
             <td class="check">By agreement</td>
             <td class="check">By agreement</td>
-            <td class="check">Preferred partner status</td>
+            <td class="check">Preferred collaborator status</td>
           </tr>
         </tbody>
       </table>
 
       <div class="callout" style="margin-top: 14px;">
-        <strong>Not sure which tier fits?</strong> Many partners start with in-kind support (materials, machining, components, or services) and grow over time. Reach out and we'll find an arrangement that works for both sides.
+        <strong>Not sure which tier fits?</strong> Many sponsors start with in-kind support (materials, machining, components, or services) and grow over time. Reach out and we'll find an arrangement that works for both sides.
       </div>
     </div>
     <div class="page-footer">
@@ -995,11 +1076,11 @@
   </section>
 
   <!-- PAGE 9: IN-KIND + CONTACT -->
-  <section class="page page--closing" id="in-kind-partnerships">
+  <section class="page page--closing" id="in-kind-sponsorships">
     <div class="page-inner">
       <span class="eyebrow">Beyond tiers</span>
-      <h2>In-kind &amp; <span class="grad">custom</span> partnerships</h2>
-      <p>Hardware, fabrication, and expertise are just as valuable as cash. If your company can help in any of the areas below, let's talk about a partnership package with recognition at the appropriate tier.</p>
+      <h2>In-kind &amp; <span class="grad">custom</span> sponsorships</h2>
+      <p>Hardware, fabrication, and expertise are just as valuable as cash. If your company can help in any of the areas below, let's talk about a sponsorship package with recognition at the appropriate tier.</p>
 
       <div class="cols">
         <div class="card">
@@ -1037,46 +1118,34 @@
         </div>
       </div>
 
-      <h3>Current &amp; recent partners</h3>
-      <p>We're grateful to the organizations already backing our mission:</p>
-      <div class="partner-grid">
-        <div class="partner-chip">SolidWorks</div>
-        <div class="partner-chip">Protospace MFG</div>
-        <div class="partner-chip">SparkFun</div>
-        <div class="partner-chip">University Students' Council</div>
-        <div class="partner-chip">XP Power</div>
-        <div class="partner-chip">Altium</div>
+      <h3>Current &amp; recent sponsors</h3>
+      <p style="margin-bottom: 0;">We're grateful to the organizations already backing our mission:</p>
+      <div class="sponsor-chip-grid">
+        <span class="sponsor-chip sponsor-chip--featured">Metacut</span>
+        <span class="sponsor-chip">SolidWorks</span>
+        <span class="sponsor-chip">SparkFun</span>
+        <span class="sponsor-chip">University Students' Council</span>
+        <span class="sponsor-chip">XP Power</span>
+        <span class="sponsor-chip">Altium</span>
+        <span class="sponsor-chip">JLCPCB</span>
+        <span class="sponsor-chip">EasyEDA</span>
+        <span class="sponsor-chip">Metal Supermarkets</span>
+        <span class="sponsor-chip">REV Robotics</span>
       </div>
 
       <div class="contact-block" id="get-involved">
-        <h3>Ready to partner with WEMARS?</h3>
-        <p style="color: rgba(255,255,255,0.92); margin-bottom: 0;">We'd love to hear from you. Whether you're exploring Bronze sponsorship or a custom Gold partnership, our business team will respond promptly with next steps.</p>
-        <div class="contact-grid">
-          <div>
-            <strong>Email</strong><br>
-            <a href="mailto:wemars@uwo.ca">wemars@uwo.ca</a>
-          </div>
-          <div>
-            <strong>Website</strong><br>
-            <a href="https://www.wemars.org">wemars.org</a>
-          </div>
-          <div>
-            <strong>LinkedIn</strong><br>
-            <a href="https://www.linkedin.com/company/western-engineering-mars-rover-team/">Western Engineering Mars Rover Team</a>
-          </div>
-          <div>
-            <strong>Instagram</strong><br>
-            <a href="https://www.instagram.com/we.mars/">@we.mars</a>
-          </div>
-          <div>
-            <strong>Location</strong><br>
-            1151 Richmond St, London, ON N6A 3K7
-          </div>
-          <div>
-            <strong>Timeline</strong><br>
-            Partnerships welcome through June 2027
-          </div>
-        </div>
+        <h3>Ready to sponsor WEMARS?</h3>
+        <p style="color: rgba(255,255,255,0.92); margin-bottom: 8px;">We'd love to hear from you. Whether you're exploring Bronze sponsorship or a custom Gold sponsorship, our business team will respond promptly with next steps. Email <a href="mailto:wemars@uwo.ca">wemars@uwo.ca</a> · <a href="https://www.wemars.org">wemars.org</a> · Sponsorships welcome through June 2027.</p>
+        <p style="color: rgba(255,255,255,0.92); margin: 0 0 4px; font-weight: 700;">Payment &amp; Advancement Operations</p>
+        <p style="color: rgba(255,255,255,0.9); margin: 0 0 4px;">All sponsorship funding to Western is processed by Advancement Operations. Please make your cheque payable to <strong>Western University</strong> (reference <strong>WE Mars</strong>) and mail to:</p>
+        <p class="payment-address payment-address--on-dark">
+          Western University<br>
+          1151 Richmond St WH 260<br>
+          Advancement Operations<br>
+          London, ON N6A 3K7<br>
+          Canada
+        </p>
+        <p style="color: rgba(255,255,255,0.9); margin: 0;">To pay by credit card or EFT please contact <a href="mailto:donationrevenue@uwo.ca">donationrevenue@uwo.ca</a> to arrange a phone call. Please do not email credit card information.</p>
       </div>
 
       <p class="closing-note">
