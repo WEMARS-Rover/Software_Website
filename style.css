@@ -1166,7 +1166,7 @@ nav img:hover{
 
 /* Leadership — identical frame, per-photo tuning inside */
 .team-grid--leadership {
-  grid-template-columns: repeat(3, minmax(0, 280px));
+  grid-template-columns: repeat(2, minmax(0, 280px));
 }
 
 .lead-portrait {
@@ -1216,12 +1216,6 @@ nav img:hover{
   transform-origin: bottom center;
 }
 
-#lead-chris {
-  object-position: 84% 20%;
-  transform: scale(1.14) translateY(6px);
-  transform-origin: 50% 28%;
-}
-
 #lead-ben {
   object-position: 50% 20%;
   transform: scale(1.2) translate(-8px, -12px);
@@ -1230,10 +1224,6 @@ nav img:hover{
 
 .lead-portrait:hover #lead-bryan {
   transform: translateX(-50%) translateY(16px);
-}
-
-.lead-portrait:hover #lead-chris {
-  transform: scale(1.17) translateY(6px);
 }
 
 .lead-portrait:hover #lead-ben {
@@ -2731,18 +2721,6 @@ textarea.form-control{
   .team-grid--leadership {
     grid-template-columns: 1fr;
     gap: 36px;
-  }
-
-  .team-grid--leadership .profile:nth-child(1) {
-    order: 2;
-  }
-
-  .team-grid--leadership .profile:nth-child(2) {
-    order: 1;
-  }
-
-  .team-grid--leadership .profile:nth-child(3) {
-    order: 3;
   }
 
   .lead-portrait {
